@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="m-3">
+        <div class="input-group mb-3">
+            <input [(ngModel)]="username" name="username" type="text" class="form-control" placeholder="Username">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="addNewUser()" type="button">Add User</button>
+            </div>
+        </div>
+        <table class="table table-bordered ">
+            <thead>
+                <tr>
+                    <th scope="col">Users</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userOfList">
+                    <th scope="row">{{user}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
